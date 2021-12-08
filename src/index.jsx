@@ -1,7 +1,3 @@
-// const user = {
-//   name: "nicolas",
-// };
+import { App } from "./app";
 
-// console.log(user.address?.street);
-
-const App = () => <h1>hello word</h1>;
+const Warrper = () => <App />
