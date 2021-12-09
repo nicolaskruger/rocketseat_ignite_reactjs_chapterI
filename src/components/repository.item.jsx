@@ -1,13 +1,16 @@
-const RepositoryItem = ({ repository, description, link }) => {
+const RepositoryItem = ({ repository }) => {
+
+    const { name, description, html_url } = repository;
+
     return (<li>
         <strong>
-            {repository ?? "Default"}
+            {name ?? "Default"}
         </strong>
         <p>
             {description ?? "Froms in React"}
         </p>
 
-        <a href={link ?? "https://github.com"}>
+        <a href={html_url ?? "https://github.com"}>
             acessar repositorios
         </a>
     </li>);
