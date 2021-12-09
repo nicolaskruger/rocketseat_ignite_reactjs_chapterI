@@ -1,5 +1,7 @@
 import { RepositoryItem } from "./repository.item"
 
+import '../styles/repository.scss'
+
 const RepositoryList = () => {
     return (
         <section className="repository-list">
