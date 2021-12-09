@@ -8,13 +8,13 @@ const RepositoryList = () => {
 
     const URL = "https://api.github.com/users/nicolaskruger/repos";
 
-    const [repositorys, setRepositorys] = useState([]);
+    const [repositoriess, setRepositoriess] = useState([]);
 
     useEffect(() => {
         fetch(URL)
             .then(response => response.json())
             .then(data => {
-                setRepositorys(data);
+                setRepositoriess(data);
             })
     }, []);
 
@@ -25,7 +25,7 @@ const RepositoryList = () => {
             </h1>
 
             <ul>
-                {repositorys.map(repo => <RepositoryItem repository={repo} />)}
+                {repositoriess.map(repo => <RepositoryItem key={repo.name} repository={repo} />)}
             </ul>
         </section>
     )

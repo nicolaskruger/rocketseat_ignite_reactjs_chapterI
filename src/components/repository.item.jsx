@@ -2,7 +2,7 @@ const RepositoryItem = ({ repository }) => {
 
     const { name, description, html_url } = repository;
 
-    return (<li>
+    return (<li key={name}>
         <strong>
             {name ?? "Default"}
         </strong>
