@@ -8,7 +8,7 @@ const Counter = () => {
             <button
                 type="button"
                 onClick={() => setCount(count + 1)} >
-                plus
+                increment
             </button>
         </section>
     );
