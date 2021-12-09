@@ -1,3 +1,5 @@
+import { RepositoryItem } from "./repository.item"
+
 const RepositoryList = () => {
     return (
         <section className="repository-list">
@@ -7,18 +9,7 @@ const RepositoryList = () => {
 
             <ul>
                 {"________".split("").map(() => (
-                    <li>
-                        <strong>
-                            unform
-                        </strong>
-                        <p>
-                            Froms in React
-                        </p>
-
-                        <a href="">
-                            acessar repositorios
-                        </a>
-                    </li>
+                    <RepositoryItem />
                 ))}
             </ul>
         </section>
