@@ -1,14 +1,15 @@
-import { RepositoryItem } from "./repository.item"
-
 import '../styles/repository.scss'
+import { RepositoryItem } from "./repository.item"
 import { useEffect, useState } from "react"
+import { RepositoryRequest } from "../client/github.client";
 
 
 const RepositoryList = () => {
 
     const URL = "https://api.github.com/users/nicolaskruger/repos";
 
-    const [repositoriess, setRepositoriess] = useState([]);
+    const [repositoriess, setRepositoriess] = useState<RepositoryRequest[]>([]);
+
 
     useEffect(() => {
         fetch(URL)

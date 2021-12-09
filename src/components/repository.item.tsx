@@ -1,4 +1,14 @@
-const RepositoryItem = ({ repository }) => {
+import { FC } from "react";
+import { RepositoryRequest } from "../client/github.client";
+
+
+
+type RepositoryItemProps = {
+    repository: RepositoryRequest
+}
+
+
+const RepositoryItem: FC<RepositoryItemProps> = ({ repository }) => {
 
     const { name, description, html_url } = repository;
 
